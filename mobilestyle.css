@@ -11,12 +11,13 @@
 }
 
 .loading {
+	z-index: 1;
     width: 100%;
     height: 100%;
-    background-image: url(img/loading.png);
+    background-image: url(img/loading.svg);
     background-color: white;
     background-position: center;
-    background-size: 13%;
+    background-size: 47px;
     background-repeat: no-repeat;
     position: fixed;
     animation-name: example;
@@ -40,18 +41,18 @@ body{
 }
 
 .wrapper .language select{
-  font-size: 13px;
+  font-size: 12px;
   background-color: transparent;
   border: none;
-  margin-top: 15px;
+  margin-top: 17px;
   color: #8e8e8e;
 }
 
 .wrapper .header{
 	max-width: 350px;
 	width: 100%;
-	height: auto;
-	margin: 50px auto;
+	height: 90vh;
+	margin: 37px auto 10px auto;
 }
 
 .wrapper .header .top,
@@ -165,16 +166,23 @@ body{
 }
 
 .wrapper .header .fromfacebook{
-    padding-top: 57%;
+	position: absolute;
+	bottom: 15px;
+	margin: 0 auto;
     text-align: center;
+	left: 0; 
+	right: 0; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 52px;
 }
 
 .footer{
-	 background-color: #FAFAFA;
+	background-color: #FAFAFA;
 	max-width: 935px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 30px 20px 20px 20px;
+	padding: 0px 20px 20px 20px;
 	display: flex;
 	justify-content: center;
 }
@@ -201,5 +209,11 @@ body{
 	text-align: center;
 	font-size: 12px;
 	color: #999;	
-	display: block;
+	display: block; 
 }
+
+@media only screen and (max-height: 700px) {
+	.wrapper .header .fromfacebook img{
+		width: 0px;
+	}
+  }
