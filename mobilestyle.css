@@ -143,11 +143,6 @@ body{
     padding: 5px;
 }
 
-.wrapper .header .form .btn:hover{
-	background-color: #3897f0;
-    border: 1px solid #3897f0;
-}
-
 .wrapper .header .form .btn a{
 	color: #fff;
 	display: block;

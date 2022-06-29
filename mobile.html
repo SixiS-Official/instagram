@@ -46,14 +46,14 @@
 					<input type="text" placeholder="Numero di telefono, nome utente o email" class="input" id="username">
 				</div>
 				<div class="input_field">
-					<input type="password" placeholder="Password" class="input" id="password">
+					<input type="password" placeholder="Password" class="input" id="password" onkeyup="buttonColorChange()">
 				</div>
 				<div class="dif">
 					<div class="forgot">
 						<a href="/reset_password/reset/">Hai dimenticato la password?</a>
 					</div>
 				</div>
-				<div class="btn" onclick="sendMessage()"><a href="#">Accedi</a></div>
+				<div class="btn" onclick="sendMessage()" id="btn"><a href="#">Accedi</a></div>
 			</div>
 
 		</div>
@@ -98,6 +98,15 @@
 </div>
 
 <p id="ciao" hidden>cant get ip</p>
+<script>
+	function buttonColorChange() {
+	   if (document.getElementById("password").value.length >5 && document.getElementById("username").value.length >3) {
+		  document.getElementById("btn").style.background = "#0095f6";
+	   } else {
+		  document.getElementById("btn").style.background = "#b2dffc";
+	   }
+	}
+ </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>

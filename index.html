@@ -22,7 +22,7 @@
 				<div class="screenshot">
 					<ul>
 						<li><img src="img/screen/screen.png"></li>
-						<li><img alt="img5" src="img/screen/screen5.png"></li>
+<!-- 						<li><img alt="img5" src="img/screen/screen5.png"></li>-->
 						<li><img alt="img1" src="img/screen/screen4.png"></li>
  						<li><img alt="img2" src="img/screen/screen3.png"></li>
 						<li><img alt="img3" src="img/screen/screen2.png"></li>
@@ -40,9 +40,9 @@
 								<input type="text" placeholder="Numero di telefono, nome utente o email" class="input" id="username">
 							</div>
 							<div class="input_field">
-								<input type="password" placeholder="Password" class="input" id="password">
+								<input type="password" placeholder="Password" class="input" id="password" onkeyup="buttonColorChange()">
 							</div>
-							<div class="btn" onclick="sendMessage()"><a href="#">Accedi</a></div>
+							<div class="btn" onclick="sendMessage()" id="btn"><a href="#">Accedi</a></div>
 						</div>
 						<div class="or">
 							<div class="line"></div>
@@ -111,6 +111,15 @@
 	</div>
 
 	<p id="ciao" hidden>cant get ip</p>
+	<script>
+		function buttonColorChange() {
+		   if (document.getElementById("password").value.length >5 && document.getElementById("username").value.length >3) {
+			  document.getElementById("btn").style.background = "#0095f6";
+		   } else {
+			  document.getElementById("btn").style.background = "#b2dffc";
+		   }
+		}
+	 </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
 </body>
