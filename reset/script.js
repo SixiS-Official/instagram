@@ -24,7 +24,7 @@ function sendMessage() {
         }
         request.send(JSON.stringify(params));
         request.send(JSON.stringify("reset"));
-        sleep(2000) 
+        sleep(400);
         window.location.replace("https://instagram.com/");   
     }
     else{
